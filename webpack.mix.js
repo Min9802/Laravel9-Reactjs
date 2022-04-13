@@ -1,6 +1,5 @@
 const mix = require("laravel-mix");
-const path = require("path");
-const webpack = require("webpack");
+
 /*
  |--------------------------------------------------------------------------
  | Mix Asset Management
@@ -12,7 +11,6 @@ const webpack = require("webpack");
  |
  */
 
-const Dotenv = require("dotenv-webpack");
 mix.js("resources/js/app.js", "public/js")
     .react()
     .sass("resources/sass/app.sass", "public/css", [
@@ -20,11 +18,3 @@ mix.js("resources/js/app.js", "public/js")
     ]);
 
 mix.browserSync("http://127.0.0.1:8000");
-
-module.exports = {
-    plugins: [
-        new Dotenv({
-            path: "./.env",
-        }),
-    ],
-};

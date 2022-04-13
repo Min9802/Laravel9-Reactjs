@@ -1,6 +1,9 @@
 import { Link, usePage } from "@inertiajs/inertia-react";
 import React from "react";
 
+
+const drawerWidth = 240;
+
 export default function Navbar({ props, pageName }) {
     const { auth } = usePage().props;
 

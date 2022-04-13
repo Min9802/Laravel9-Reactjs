@@ -10,13 +10,17 @@ import InputBase from "@mui/material/InputBase";
 import Badge from "@mui/material/Badge";
 import MenuItem from "@mui/material/MenuItem";
 import Menu from "@mui/material/Menu";
-import MenuIcon from "@mui/icons-material/Menu";
-import SearchIcon from "@mui/icons-material/Search";
-import AccountCircle from "@mui/icons-material/AccountCircle";
-import MailIcon from "@mui/icons-material/Mail";
-import NotificationsIcon from "@mui/icons-material/Notifications";
-import MoreIcon from "@mui/icons-material/MoreVert";
-import LoginIcon from "@mui/icons-material/Login";
+
+
+import {
+    FaSignInAlt,
+    FaMailBulk,
+    FaUserCircle,
+    FaBars,
+    FaEllipsisV,
+    FaSearch,
+    FaBell,
+} from "react-icons/fa";
 
 const Search = styled("div")(({ theme }) => ({
     position: "relative",
@@ -99,7 +103,7 @@ export default function Navbar() {
         >
             <Link href={route("login")}>
                 <MenuItem onClick={handleMenuClose}>
-                    <LoginIcon />
+                    <FaSignInAlt />
                     {" Login"}
                 </MenuItem>
             </Link>
@@ -129,7 +133,7 @@ export default function Navbar() {
                     color="inherit"
                 >
                     <Badge badgeContent={4} color="error">
-                        <MailIcon />
+                        <FaMailBulk />
                     </Badge>
                 </IconButton>
                 <p>Messages</p>
@@ -141,7 +145,7 @@ export default function Navbar() {
                     color="inherit"
                 >
                     <Badge badgeContent={17} color="error">
-                        <NotificationsIcon />
+                        <FaBell />
                     </Badge>
                 </IconButton>
                 <p>Notifications</p>
@@ -154,7 +158,7 @@ export default function Navbar() {
                     aria-haspopup="true"
                     color="inherit"
                 >
-                    <AccountCircle />
+                    <FaUserCircle />
                 </IconButton>
                 <p>Profile</p>
             </MenuItem>
@@ -171,7 +175,7 @@ export default function Navbar() {
                         aria-label="open drawer"
                         sx={{ mr: 2 }}
                     >
-                        <MenuIcon />
+                        <FaBars />
                     </IconButton>
                     <Typography
                         variant="h6"
@@ -179,11 +183,11 @@ export default function Navbar() {
                         component="div"
                         sx={{ display: { xs: "none", sm: "block" } }}
                     >
-                        {console.log(process.env.APP_NAME)}
+                        {process.env.APP_NAME}
                     </Typography>
                     <Search>
                         <SearchIconWrapper>
-                            <SearchIcon />
+                            <FaSearch />
                         </SearchIconWrapper>
                         <StyledInputBase
                             placeholder="Search…"
@@ -198,7 +202,7 @@ export default function Navbar() {
                             color="inherit"
                         >
                             <Badge badgeContent={4} color="error">
-                                <MailIcon />
+                                <FaMailBulk />
                             </Badge>
                         </IconButton>
                         <IconButton
@@ -207,7 +211,7 @@ export default function Navbar() {
                             color="inherit"
                         >
                             <Badge badgeContent={17} color="error">
-                                <NotificationsIcon />
+                                <FaBell />
                             </Badge>
                         </IconButton>
                         <IconButton
@@ -219,7 +223,7 @@ export default function Navbar() {
                             onClick={handleProfileMenuOpen}
                             color="inherit"
                         >
-                            <AccountCircle />
+                            <FaUserCircle />
                         </IconButton>
                     </Box>
                     <Box sx={{ display: { xs: "flex", md: "none" } }}>
@@ -231,7 +235,7 @@ export default function Navbar() {
                             onClick={handleMobileMenuOpen}
                             color="inherit"
                         >
-                            <MoreIcon />
+                            <FaEllipsisV />
                         </IconButton>
                     </Box>
                 </Toolbar>
