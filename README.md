@@ -85,16 +85,6 @@
 </details>
 
 
-
-<!-- ABOUT THE PROJECT -->
-## About The Project
-
-<p align="center">
-  <img src="https://raw.githubusercontent.com/agungksidik/laravel9-inertiajs-reactjs-starter/master/images/screenshoot1.png" />
-</p>
-
-<p align="right">(<a href="#top">back to top</a>)</p>
-
 ### Built With
 
 * [Laravel 9](https://laravel.com)
